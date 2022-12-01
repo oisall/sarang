@@ -1,6 +1,7 @@
 import { Form, Input, Button } from 'antd';
 import  React,{ useCallback, useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { backUrl } from '../config/config';
 import { addPost,UPLOAD_IMAGES_REQUEST,REMOVE_IMAGE, ADD_POST_REQUEST } from '../reducers/post';
 
 const PostForm = () => {
@@ -80,7 +81,7 @@ const onRemoveImage=useCallback((index)=>()=>{
             <div>
                 {imagePaths.map((v,i) => (
                     <div key={v} style={{ display: 'inline-block' }}>
-                        <img src={`http://localhost:3065/${v}`} style={{ width: '200px' }} alt={v} />
+                        <img src={`${backUrl}/${v}`} style={{ width: '200px' }} alt={v} />
                         <div>
                             <Button onClick={onRemoveImage(i)}>제거</Button>
                         </div>
