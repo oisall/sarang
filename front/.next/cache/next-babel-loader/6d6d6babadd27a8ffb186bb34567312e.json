@@ -1,0 +1,1 @@
+{"ast":null,"code":"const LoginForm = () => {};\nexport default LoginForm;","map":{"version":3,"names":["LoginForm"],"sources":["C:/Dev/next_react_node/front/components/LoginForm.js"],"sourcesContent":["const LoginForm=()=>{\r\n\r\n\r\n}\r\n\r\nexport default LoginForm;"],"mappings":"AAAA,MAAMA,SAAS,GAAC,MAAI,CAGpB,CAAC;AAED,eAAeA,SAAS"},"metadata":{},"sourceType":"module"}
