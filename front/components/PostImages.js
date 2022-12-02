@@ -27,8 +27,8 @@ const PostImages = ({ images }) => {
     if (images.length === 2) {
         return (
             <>
-                <img role='presentation' width="50%" scr={`${backUrl}/${images[0].src}`} alt={images[0].src} onClick={onZoom} />
-                <img role='presentation' width="50%" scr={`${backUrl}/${images[1].src}`} alt={images[1].src} onClick={onZoom} />
+                <img role='presentation' style={{ width: '50%', display: 'inline-block' }} scr={`${backUrl}/${images[0].src}`} alt={images[0].src} onClick={onZoom} />
+                <img role='presentation' style={{ width: '50%', display: 'inline-block' }} scr={`${backUrl}/${images[1].src}`} alt={images[1].src} onClick={onZoom} />
                 {showImagesZoom && <ImagesZoom  images={images} onClose={onClose}/>}
 
             </>
