@@ -159,7 +159,7 @@ const reducer = (state = initialState, action) => {
             case UPLOAD_IMAGES_SUCCESS:
 
             
-                draft.imagePaths = action.data
+                draft.imagePaths = draft.imagePaths.concat(action.data);
                 console.log('성공')
 
                 draft.uploadImagesLoading= false;
