@@ -1,0 +1,1 @@
+export const backUrl = 'http://api.bitfrommind.com'
