@@ -11,7 +11,7 @@ import axios from 'axios';
 import { LOAD_MY_INFO_REQUEST } from '../reducers/user';
 import wrapper from '../store/configureStore';
 import { backUrl } from '../config/config';
-
+import { END } from 'redux-saga';
 
 const fetcher=(url)=>axios.get(url,{withCredentials:true}).then((result)=>result.data);
 
