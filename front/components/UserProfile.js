@@ -22,7 +22,7 @@ const onLogOut = useCallback(()=>{
             <Card.Meta
                 title={me.nickname}
                 avatar={(
-                    <Link href={`/user/${me.id}`}>
+                    <Link href={`/user/${me.id}`} prefetch={false}>
                         <a><Avatar>{me.nickname[0]}</Avatar></a>
                     </Link>
                     )}
