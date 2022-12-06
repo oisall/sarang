@@ -1,1 +1,1 @@
-export const backUrl = 'http://api.bitfrommind.com'
+export const backUrl = 'https://api.bitfrommind.com'

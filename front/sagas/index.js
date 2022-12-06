@@ -5,7 +5,7 @@ import userSaga from './user';
 import { backUrl } from '../config/config';
 
 
-axios.defaults.baseURL = backUrl;
+axios.defaults.baseURL = ;
 axios.defaults.withCredentials=true;
 
 

@@ -10,7 +10,7 @@ const configureStore=()=>{
     const sagaMiddleWare = createSagaMiddleware();
     const middlewares = [sagaMiddleWare];
     const enhancer = process.NODE_ENV ==='production'
-    ?compose(applyMiddleware(...middlewares))
+    ?compose(applyMiddleware(sagaMiddleWare))
     :composeWithDevTools(applyMiddleware(...middlewares))
     const store=createStore(reducer,enhancer);
     store.sagaTask = sagaMiddleWare.run(rootSaga);
