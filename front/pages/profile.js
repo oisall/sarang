@@ -66,20 +66,20 @@ if(followerError || followingError){
 
 };
 
-export const getServerSideProps = wrapper.getServerSideProps(async (context) => {
+export const getServerSideProps = wrapper.getServerSideProps( store =>async({req,res,params}) =>{
     console.log('getServerSideProps start');
-    console.log(context.req.headers);
-    const cookie = context.req ? context.req.headers.cookie : '';
+
+    const cookie = req ? req.headers.cookie : '';
     axios.defaults.headers.Cookie = '';
-    if (context.req && cookie) {
+    if (req && cookie) {
       axios.defaults.headers.Cookie = cookie;
     }
-    context.store.dispatch({
+    store.dispatch({
       type: LOAD_MY_INFO_REQUEST,
     });
-    context.store.dispatch(END);
+    store.dispatch(END);
     console.log('getServerSideProps end');
-    await context.store.sagaTask.toPromise();
+    await store.sagaTask.toPromise();
   });
   
 export default Profile;
