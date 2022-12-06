@@ -24,7 +24,7 @@ const PostCard = ({ post }) => {
 
   const onLike = useCallback(() => {
     if (!id) {
-      return alert('.');
+      return alert('로그인이 필요합니다.');
     }
     return dispatch({
       type: LIKE_POST_REQUEST,
@@ -103,7 +103,7 @@ const PostCard = ({ post }) => {
             >
               <span style={{ float: 'right' }}>{moment(post.createdAt).format('YYYY.MM.DD.')}</span>
               <Card.Meta
-                avatar={<Link href={`/user/${post.Retweet.User.id}`}prefetch={false}><a><Avatar>{post.Retweet.User.nickname[0]}</Avatar></a></Link>}
+                avatar={<Link href={`/user/${post.Retweet.User.id}`} prefetch={false}><a><Avatar>{post.Retweet.User.nickname[0]}</Avatar></a></Link>}
                 title={post.Retweet.User.nickname}
                 description={<PostCardContent postData={post.Retweet.content} />}
               />
