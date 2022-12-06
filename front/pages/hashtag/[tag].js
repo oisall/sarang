@@ -43,6 +43,7 @@ const Hashtag = () => {
     </AppLayout>
   );
 };
+
 export const getServerSideProps = wrapper.getServerSideProps( store =>async({req,res,params}) =>{
   const cookie = req ? req.headers.cookie : '';
 
