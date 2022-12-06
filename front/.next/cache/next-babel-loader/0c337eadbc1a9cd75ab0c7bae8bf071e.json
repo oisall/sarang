@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var backUrl = 'https://api.bitfrommind.com';","map":{"version":3,"names":["backUrl"],"sources":["C:/Dev/next_react_node/front/config/config.js"],"sourcesContent":["export const backUrl = 'https://api.bitfrommind.com'"],"mappings":"AAAA,OAAO,IAAMA,OAAO,GAAG,6BAA6B"},"metadata":{},"sourceType":"module"}
